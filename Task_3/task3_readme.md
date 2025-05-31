@@ -1,3 +1,7 @@
+This file is made in correspondence to **Task 3 : Perform a Basic Vulnerability Scan on Your PC.**
+
+---
+
 A **Vulnerability Scanner** is a security tool that automatically detects known weaknesses in systems, networks, or applications by scanning them and comparing results against a database of known vulnerabilities. It helps organizations **identify, assess, and prioritize security risks** to reduce exposure to cyberattacks.
 
 OpenVAS (Open Vulnerability Assessment System) is an open-source vulnerability scanner used to assess the security of computer systems and networks by identifying known vulnerabilities. 
