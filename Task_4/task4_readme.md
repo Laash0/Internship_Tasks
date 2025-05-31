@@ -26,6 +26,7 @@ sudo firewall-cmd --list-all
 ```
 
 3. Next step is to block a specific port , here we choose an already allowed port to block off which in this case is port `1716`.
+   This port is being used by a service named _KDE Connect_ which stopped working upon disabling the port mentioned.
 
 ```
 sudo firewall-cmd --remove-port=1716/tcp
@@ -37,13 +38,7 @@ sudo firewall-cmd --remove-port=1716/tcp
 sudo firewall-cmd --add-port=22/tcp
 ```
 
-5. For all changes to take effect , we use the following command to reload firewall with updated configuration.
-
-```
-sudo firewall-cmd --reload
-```
-
-6. To remove the added test rules , we just reverse our actions.
+5. To remove the added test rules , we just reverse our actions.
 
 ```
 sudo firewall-cmd --add-port=1716/tcp
@@ -51,6 +46,12 @@ sudo firewall-cmd --add-port=1716/tcp
 
 ```
 sudo firewall-cmd --remove-port=22/tcp
+```
+
+6. Alternatively , the better route to get rid of all the test rules is to reload the firewall.
+
+```
+sudo firewall-cmd --reload
 ```
 
 ## Summary
