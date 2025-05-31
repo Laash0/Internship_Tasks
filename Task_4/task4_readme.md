@@ -1,3 +1,7 @@
+This file is being created in correspondence to **Task 4 : Setup and Use a Firewall on Windows/Linux**.
+
+---
+
 A firewall is a network security device—either hardware, software, or a combination—that monitors and controls incoming and outgoing network traffic based on predetermined security rules. 
 
 Its main function is to act as a barrier between a trusted internal network and untrusted external networks (like the internet), allowing only legitimate and safe traffic while blocking potentially harmful or unauthorized access. 
