@@ -1,0 +1,11 @@
+CIS Linux Benchmark Audit - 2025-06-26 13:24:07
+
+1.1.1 Ensure mounting of cramfs filesystems is disabled: FAIL
+    Remediation: Add 'install cramfs /bin/true' to /etc/modprobe.d/CIS.conf
+2.2.1 Ensure time synchronization is in use (chrony or ntpd): FAIL
+    Remediation: Install and enable chrony or ntpd
+3.4.1 Ensure firewall is enabled: PASS
+5.2.8 Ensure SSH root login is disabled: FAIL
+    Remediation: Set 'PermitRootLogin no' in /etc/ssh/sshd_config
+
+CIS Compliance Score: 1/4 (25.0%)

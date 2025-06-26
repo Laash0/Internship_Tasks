@@ -1,0 +1,97 @@
+Linux Audit Report - 2025-06-26 13:24:07
+
+✅ firewalld is active.
+
+❌ auditd is not active.
+
+🔐 SSH Configuration:
+⚠️ PermitRootLogin setting not found in SSH config.
+⚠️ PasswordAuthentication setting not found in SSH config.
+
+🔒 File Permissions:
+✅ /etc/passwd permissions are 644 (OK)
+✅ /etc/shadow permissions are 400 (OK)
+
+⚠️ chkrootkit not installed. Skipping rootkit scan.
+
+❌ System has pending updates.
+
+✅ No world-writable files found.
+
+⚠️ The following services are listening on non-localhost addresses:
+udp   UNCONN 0      0                                0.0.0.0:54090      0.0.0.0:*   
+udp   UNCONN 0      0                                0.0.0.0:5353       0.0.0.0:*   
+udp   UNCONN 0      0                                0.0.0.0:5353       0.0.0.0:*   
+udp   UNCONN 0      0                            224.0.0.251:5353       0.0.0.0:*   
+udp   UNCONN 0      0                                0.0.0.0:5353       0.0.0.0:*   
+udp   UNCONN 0      0                                0.0.0.0:47187      0.0.0.0:*   
+udp   UNCONN 0      0                                   [::]:5353          [::]:*   
+udp   UNCONN 0      0      [fe80::351b:5e6c:8b19:87ad]%wlan0:546           [::]:*   
+udp   UNCONN 0      0                                      *:49708            *:*   
+udp   UNCONN 0      0                                      *:33420            *:*   
+udp   UNCONN 0      0                                      *:50754            *:*   
+udp   UNCONN 0      0                                      *:1716             *:*   
+udp   UNCONN 0      0                                   [::]:51074         [::]:*   
+udp   UNCONN 0      0                                      *:51300            *:*   
+udp   UNCONN 0      0                                      *:35003            *:*   
+udp   UNCONN 0      0                                      *:45157            *:*   
+tcp   LISTEN 0      80                               0.0.0.0:3306       0.0.0.0:*   
+tcp   LISTEN 0      80                                  [::]:3306          [::]:*   
+tcp   LISTEN 0      50                                     *:1716             *:*   
+
+✅ Sudoers file looks secure.
+
+✅ No users with empty passwords.
+
+❌ Cron not properly configured.
+
+❌ PASS_MAX_DAYS is not compliant (found: 99999, expected: <=90).
+
+❌ PASS_MIN_DAYS is not compliant (found: 0, expected: >=7).
+
+✅ PASS_WARN_AGE is compliant (>=7).
+
+
+📊 Compliance Score: 7/16 (43.75%)
+
+
+🛠️ Recommendations:
+
+- Enable auditing: sudo systemctl enable --now auditd
+
+- Add PermitRootLogin no to /etc/ssh/sshd_config
+
+- Add PasswordAuthentication no to /etc/ssh/sshd_config
+
+- Install chkrootkit with: sudo apt/dnf/pacman install chkrootkit
+
+- Update system packages: sudo pacman -Syu
+
+- Review open ports and disable unnecessary services.
+
+- Ensure cron is installed and /etc/cron.d exists.
+
+- Set PASS_MAX_DAYS to 90 in /etc/login.defs
+
+- Set PASS_MIN_DAYS to 7 in /etc/login.defs
+
+🛠️ Recommendations (by Priority):
+
+🔷 Critical Security:
+- Enable auditing: sudo systemctl enable --now auditd
+- Install chkrootkit with: sudo apt/dnf/pacman install chkrootkit
+
+🔷 Network & Access Control:
+- Add PermitRootLogin no to /etc/ssh/sshd_config
+- Add PasswordAuthentication no to /etc/ssh/sshd_config
+- Review open ports and disable unnecessary services.
+
+🔷 Service & User Management:
+- Ensure cron is installed and /etc/cron.d exists.
+
+🔷 System Configuration:
+- Update system packages: sudo pacman -Syu
+
+🔷 Other:
+- Set PASS_MAX_DAYS to 90 in /etc/login.defs
+- Set PASS_MIN_DAYS to 7 in /etc/login.defs
